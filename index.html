@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactos</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Lista de Contactos</h1>
-    <form id="form">
-        <div class="input-container">
-            <label for="name-input">Nombre:</label>
-            <input type="text" id="name-input" autocomplete="off">
-            <!-- Autocomplete off se usa para eliminar el autocompletado -->
-            <p class="helper-form">
-                La primera letra tiene que ser mayúscula y tener un solo nombre
-            </p>
-        </div>
-        <div class="input-container">
-            <label for="phone-input">Numero: </label>
-            <input type="text" id="phone-input" autocomplete="off">
-            <p class="helper-form">
-              Tiene que ser un numero venezolano valido.
-            </p>
-          </div>
-          <button id="form-btn" disabled type="submit">Crear Contacto</button>
-    </form>
-    <ul id="list">
-    </ul>
-    <script src="index.js"></script>
+  <form id="form">
+    <div class="input-container">
+      <label for="name-input">Nombre </label>
+      <input class="input-form" type="text" id="name-input" autocomplete="off" placeholder="Gabriel">
+      <p class="helper-form">
+        La primera letra tiene que ser mayuscula y tener un solo nombre.
+      </p>
+    </div>
+    <div class="input-container">
+      <label for="phone-input">Numero </label>
+      <input class="input-form" type="text" id="phone-input" autocomplete="off" placeholder="0XXXXXXXX">
+      <p class="helper-form">
+        Tiene que ser un numero venezolano valido.
+      </p>
+    </div>
+    <button id="form-btn" disabled type="submit">Crear</button>
+  </form>
+  <ul id="list">
+    <li class="list-item">
+      <button class="delete-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </button>
+      <div class="edit-inputs-container">
+        <input class="edit-input" type="text" value="Gabriel" readonly>
+        <input class="edit-input" type="text" value="04145424484" readonly>
+      </div>
+      <button class="edit-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+        </svg>
+      </button>
+    </li>
+  </ul>
+  <script src="eventos.js"></script>
 </body>
 </html>
